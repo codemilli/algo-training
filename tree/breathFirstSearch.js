@@ -29,7 +29,7 @@ function initCallbacks(callbacks = {}) {
  * @param {BinaryTreeNode} rootNode
  * @param {Callbacks} [originalCallbacks]
  */
-export default function breadthFirstSearch(rootNode, originalCallbacks) {
+module.exports = function breadthFirstSearch(rootNode, originalCallbacks) {
   const callbacks = initCallbacks(originalCallbacks);
   const nodeQueue = new Queue();
 

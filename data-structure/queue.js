@@ -1,6 +1,6 @@
 const LinkedList = require('../linked-list/LinkedList')
 
-export default class Queue {
+module.exports = class Queue {
   constructor() {
     this.linkedList = new LinkedList();
   }
