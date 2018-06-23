@@ -89,20 +89,21 @@ function solution(A, B, C, D, E, F) {
             rest5.splice(idx, 1)
 
             rest5.forEach((sixth, idx) => {
+              const list = [first, second, third, forth, fifth, sixth]
               if (first === 2 && second === 4) {
                 if (third + forth + fifth + sixth === 0) {
-                  possibleList.push([first, second, third, forth, fifth, sixth])
+                  possibleList.push(list)
                 } else {
-                  impossibleList.push([first, second, third, forth, fifth, sixth])
+                  impossibleList.push(list)
                 }
               } else if (
                 isValid24Format(first, second) &&
                 isValid60Format(third, forth) &&
                 isValid60Format(fifth, sixth)
               ) {
-                possibleList.push([first, second, third, forth, fifth, sixth])
+                possibleList.push(list)
               } else {
-                impossibleList.push([first, second, third, forth, fifth, sixth])
+                impossibleList.push(list)
               }
 
               count++
